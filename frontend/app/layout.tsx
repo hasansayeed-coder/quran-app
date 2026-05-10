@@ -20,7 +20,7 @@ const AUDIO_CDN = "https://cdn.islamic.network/quran/audio";
 const AUDIO_BITRATE = 128;
 
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>
