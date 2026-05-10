@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Scheherazade+New:wght@400;700&family=Noto+Naskh+Arabic:wght@400;600&family=Lateef:wght@400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Light theme (default) ───────────────────────────────────────── */
+:root {
+  --color-bg:           #fdf8f0;
+  --color-surface:      #f7edd8;
+  --color-surface-2:    #ffffff;
+  --color-border:       #e2c27f;
+  --color-border-faint: rgba(226,194,127,0.3);
+  --color-gold:         #c4892e;
+  --color-gold-light:   #d4a44d;
+  --color-text:         #1a1814;
+  --color-text-muted:   #7a7460;
+  --color-text-subtle:  #b4ae97;
+  --color-sidebar-bg:   #1a1814;
+  --color-sidebar-text: #f7edd8;
+  --color-card-bg:      rgba(255,255,255,0.6);
+  --color-card-hover:   rgba(255,255,255,0.9);
+  --color-header-bg:    rgba(253,248,240,0.9);
+  --color-mark:         rgba(212,164,77,0.3);
+  --color-scroll-track: #f7edd8;
+  --color-scroll-thumb: #e2c27f;
+}
+
+/* ── Dark theme ──────────────────────────────────────────────────── */
+html.dark {
+  --color-bg:           #0f0e0c;
+  --color-surface:      #1a1814;
+  --color-surface-2:    #211f1b;
+  --color-border:       #3d3832;
+  --color-border-faint: rgba(61,56,50,0.6);
+  --color-gold:         #d4a44d;
+  --color-gold-light:   #e2b96a;
+  --color-text:         #f0e8d8;
+  --color-text-muted:   #8a8070;
+  --color-text-subtle:  #5a5248;
+  --color-sidebar-bg:   #0a0908;
+  --color-sidebar-text: #f0e8d8;
+  --color-card-bg:      rgba(26,24,20,0.8);
+  --color-card-hover:   rgba(33,31,27,0.95);
+  --color-header-bg:    rgba(15,14,12,0.92);
+  --color-mark:         rgba(212,164,77,0.2);
+  --color-scroll-track: #1a1814;
+  --color-scroll-thumb: #3d3832;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+/* ── Base body ───────────────────────────────────────────────────── */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    radial-gradient(ellipse at 20% 80%, rgba(212,164,77,0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(196,137,46,0.04) 0%, transparent 50%);
+}
+
+html.dark body::before {
+  background-image:
+    radial-gradient(ellipse at 20% 80%, rgba(212,164,77,0.03) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(196,137,46,0.02) 0%, transparent 50%);
+}
+
+/* ── Arabic text ────────────────────────────────────────────────── */
+.arabic-text {
+  font-feature-settings: "liga" 1, "calt" 1, "kern" 1;
+  text-rendering: optimizeLegibility;
+  direction: rtl;
+  unicode-bidi: isolate;
+  line-height: 2.2;
+  letter-spacing: 0.02em;
+}
+
+/* ── Sidebar transition ─────────────────────────────────────────── */
+.sidebar {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Ayah card ──────────────────────────────────────────────────── */
+.ayah-card {
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+.ayah-card:hover {
+  border-color: var(--color-gold-light);
+  box-shadow: 0 4px 20px rgba(196,137,46,0.1);
+}
+
+/* ── Search highlight ───────────────────────────────────────────── */
+mark {
+  background: var(--color-mark);
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
+/* ── Scrollbar ──────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-scroll-track); }
+::-webkit-scrollbar-thumb { background: var(--color-scroll-thumb); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-gold); }
+
+/* ── Range input ────────────────────────────────────────────────── */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  background: var(--color-border);
+  border-radius: 2px;
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-gold);
+  cursor: pointer;
+}
+
+/* ── Dark mode utility overrides ────────────────────────────────── */
+
+/* Navbar */
+html.dark header {
+  background-color: var(--color-header-bg) !important;
+  border-color: var(--color-border) !important;
+}
+
+/* Cards and surfaces */
+html.dark .bg-white\/60   { background-color: var(--color-card-bg) !important; }
+html.dark .bg-white\/80   { background-color: rgba(26,24,20,0.8) !important; }
+html.dark .bg-white\/90   { background-color: var(--color-card-hover) !important; }
+html.dark .hover\:bg-white\/90:hover { background-color: var(--color-card-hover) !important; }
+
+/* Parchment surfaces */
+html.dark .bg-\[\#fdf8f0\]     { background-color: var(--color-bg) !important; }
+html.dark .bg-\[\#f7edd8\]     { background-color: var(--color-surface) !important; }
+html.dark .bg-\[\#f7edd8\]\/40 { background-color: rgba(26,24,20,0.4) !important; }
+html.dark .bg-\[\#f7edd8\]\/50 { background-color: rgba(26,24,20,0.5) !important; }
+html.dark .bg-\[\#f7edd8\]\/60 { background-color: rgba(26,24,20,0.6) !important; }
+html.dark .bg-\[\#f7edd8\]\/30 { background-color: rgba(26,24,20,0.3) !important; }
+html.dark .hover\:bg-\[\#f7edd8\]:hover     { background-color: var(--color-surface) !important; }
+html.dark .hover\:bg-\[\#f7edd8\]\/30:hover { background-color: rgba(26,24,20,0.3) !important; }
+
+/* Text colors */
+html.dark .text-\[\#1a1814\]           { color: var(--color-text) !important; }
+html.dark .text-\[\#3d3932\]           { color: #c8bfad !important; }
+html.dark .text-\[\#7a7460\]           { color: var(--color-text-muted) !important; }
+html.dark .text-\[\#b4ae97\]           { color: var(--color-text-subtle) !important; }
+html.dark .hover\:text-\[\#1a1814\]:hover { color: var(--color-text) !important; }
+
+/* Borders */
+html.dark .border-\[\#e2c27f\]\/40 { border-color: rgba(61,56,50,0.6) !important; }
+html.dark .border-\[\#e2c27f\]\/30 { border-color: rgba(61,56,50,0.5) !important; }
+html.dark .border-\[\#e2c27f\]\/20 { border-color: rgba(61,56,50,0.35) !important; }
+html.dark .border-\[\#e2c27f\]\/15 { border-color: rgba(61,56,50,0.25) !important; }
+html.dark .border-\[\#e2c27f\]\/50 { border-color: rgba(61,56,50,0.7) !important; }
+
+/* Surah list gradient card */
+html.dark .from-\[\#fdf8f0\]   { --tw-gradient-from: var(--color-bg) !important; }
+html.dark .to-\[\#f7edd8\]\/60 { --tw-gradient-to: rgba(26,24,20,0.6) !important; }
+
+/* Footer */
+html.dark footer {
+  background-color: rgba(15,14,12,0.6) !important;
+  border-color: var(--color-border) !important;
+}
+
+/* Input / search bar */
+html.dark input[type="search"],
+html.dark input[type="text"] {
+  color: var(--color-text) !important;
+}
+html.dark input::placeholder { color: var(--color-text-subtle) !important; }
+
+/* Dropdown menus (copy button, reciter) */
+html.dark .bg-white {
+  background-color: var(--color-surface-2) !important;
+}
+
+/* Tafsir amber error box */
+html.dark .bg-amber-50       { background-color: rgba(120,80,20,0.15) !important; }
+html.dark .border-amber-200  { border-color: rgba(180,120,40,0.3) !important; }
+html.dark .text-amber-700    { color: #d4a44d !important; }
+html.dark .text-amber-600    { color: #c4892e !important; }
+
+/* Emerald copy success */
+html.dark .bg-emerald-50     { background-color: rgba(20,80,40,0.2) !important; }
+html.dark .border-emerald-200 { border-color: rgba(40,160,80,0.3) !important; }
+
+/* Red error */
+html.dark .bg-red-50         { background-color: rgba(80,20,20,0.2) !important; }
+html.dark .border-red-200    { border-color: rgba(160,60,60,0.3) !important; }
+html.dark .text-red-700      { color: #f87171 !important; }
+
+/* ── Smooth all background & color transitions ───────────────────── */
+*, *::before, *::after {
+  transition-property: background-color, border-color, color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+/* Don't slow down transforms / opacity / layout animations */
+.sidebar, .animate-spin, .animate-pulse,
+[class*="translate"], [class*="scale"], [class*="rotate"] {
+  transition-property: transform, opacity !important;
+}
