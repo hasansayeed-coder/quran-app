@@ -4,7 +4,7 @@ export const metadata = {
 };
 
 import { getSurahs } from "@/lib/api";
-import ProgressClient from "@/components/ProgressClient";
+import ProgressClient from "../../components/ProgressClient";
 
 export default async function ProgressPage() {
   let surahs = [];

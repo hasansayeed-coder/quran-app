@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useAudio, RECITERS } from "@/components/AudioPlayer";
+import { useAudio, RECITERS } from "../components/AudioPlayer";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
 

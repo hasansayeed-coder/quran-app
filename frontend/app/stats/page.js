@@ -3,7 +3,7 @@ export const metadata = {
   description: "Fascinating facts, numbers and insights about the Holy Quran",
 };
 
-import StatsClient from "@/components/StatsClient";
+import StatsClient from "../../components/StatsClient";
 
 export default function StatsPage() {
   return (

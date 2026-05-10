@@ -3,14 +3,14 @@
 import { useSettings } from "../components/context/SettingsContext";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import BookmarkButton from "@/components/BookmarkButton";
-import TafsirPanel from "@/components/TafsirPanel";
-import PlayAyahButton from "@/components/PlayAyahButton";
-import CopyAyahButton from "@/components/CopyAyahButton";
-import MarkAsReadButton from "@/components/MarkAsReadButton";
-import ShareAyahButton from "@/components/ShareayahButton";
-import NoteButton from "@/components/NoteButton";
-import WordByWord from "@/components/WordByWord";
+import BookmarkButton from "../components/BookmarkButton";
+import TafsirPanel from "../components/TafsirPanel";
+import PlayAyahButton from "../components/PlayAyahButton";
+import CopyAyahButton from "../components/CopyAyahButton";
+import MarkAsReadButton from "../components/MarkAsReadButton";
+import ShareAyahButton from "../components/ShareayahButton";
+import NoteButton from "../components/NoteButton";
+import WordByWord from "../components/WordByWord";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
 

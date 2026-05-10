@@ -3,7 +3,7 @@ export const metadata = {
   description: "Compare two surahs side by side — themes, lengths, revelation type and key topics",
 };
 
-import CompareClient from "@/components/CompareClient";
+import CompareClient from "../../components/CompareClient";
 
 export default function ComparePage() {
   return (

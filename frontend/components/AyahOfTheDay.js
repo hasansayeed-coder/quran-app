@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useSettings } from "../components/context/SettingsContext";
 import { useBookmarks } from "../components/context/BookmarksContext";
-import { useAudio } from "@/components/AudioPlayer";
+import { useAudio } from "../components/AudioPlayer";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
 

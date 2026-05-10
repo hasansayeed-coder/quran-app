@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useSettings } from "../components/context/SettingsContext";
 import { useBookmarks } from "../components/context/BookmarksContext";
-import { useAudio } from "@/components/AudioPlayer";
-import { MOODS, MOOD_AYAHS } from "@/lib/moodAyahs";
+import { useAudio } from "../components/AudioPlayer";
+import { MOODS, MOOD_AYAHS } from "../lib/moodAyahs";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
 

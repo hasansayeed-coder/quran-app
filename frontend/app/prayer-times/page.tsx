@@ -3,7 +3,7 @@ export const metadata = {
   description: "Daily prayer times based on your location",
 };
 
-import PrayerTimesClient from "@/components/PrayerTimesClient";
+import PrayerTimesClient from "../../components/PrayerTimesClient";
 
 export default function PrayerTimesPage() {
   return (

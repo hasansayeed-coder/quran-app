@@ -1,5 +1,5 @@
 import { getSurah, getSurahs } from "@/lib/api";
-import SurahView from "@/components/SurahView";
+import SurahView from "../../../components/SurahView";
 import Link from "next/link";
 
 export async function generateStaticParams() {

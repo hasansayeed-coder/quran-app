@@ -1,6 +1,6 @@
 "use client";
 
-import { useAudio } from "@/components/AudioPlayer";
+import { useAudio } from "../components/AudioPlayer";
 
 export default function PlayAyahButton({ ayah, ayahList }) {
   const { loadAyah, togglePlay, currentAyah, playing, loading } = useAudio();

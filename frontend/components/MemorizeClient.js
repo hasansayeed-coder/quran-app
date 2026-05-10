@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";   
-import { useAudio } from "@/components/AudioPlayer";
+import { useAudio } from "../components/AudioPlayer";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
 

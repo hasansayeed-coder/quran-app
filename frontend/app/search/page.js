@@ -3,7 +3,7 @@ export const metadata = {
   description: "Search the Holy Quran by translation text",
 };
 
-import SearchClient from "@/components/SearchClient";
+import SearchClient from "../../components/SearchClient";
 
 export default function SearchPage() {
   return (

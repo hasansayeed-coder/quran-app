@@ -4,8 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { useBookmarks } from "../components/context/BookmarksContext";
 import { useSettings } from "../components/context/SettingsContext";
-import TafsirPanel from "@/components/TafsirPanel";
-import CopyAyahButton from "@/components/CopyAyahButton";
+import TafsirPanel from "../components/TafsirPanel";
+import CopyAyahButton from "../components/CopyAyahButton";
 import ShareAyahButton from "../components/ShareayahButton";
 
 

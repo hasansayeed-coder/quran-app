@@ -1,7 +1,7 @@
 import { getSurahs } from "../lib/api";
-import AyahOfTheDay from "@/components/AyahOfTheDay";
-import JuzNavigator from "@/components/JuzNavigator";
-import MoodAyah from "@/components/MoodAyah";
+import AyahOfTheDay from "../components/AyahOfTheDay";
+import JuzNavigator from "../components/JuzNavigator";
+import MoodAyah from "../components/MoodAyah";
 import ReadingProgressBar from "../components/ReadingProgressBar";
 
 export const revalidate = 86400;

@@ -3,7 +3,7 @@
 import { useState, useCallback, useRef } from "react";
 import Link from "next/link";
 import { useSettings } from "../components/context/SettingsContext";
-import CopyAyahButton from "@/components/CopyAyahButton";
+import CopyAyahButton from "../components/CopyAyahButton";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
 
