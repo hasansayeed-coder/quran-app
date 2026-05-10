@@ -1,7 +1,8 @@
+import "./globals.css";
 import React from "react";
-import { SettingsProvider } from "@/components/context/SettingsContext";
-import {BookmarksProvider } from "@/components/context/BookmarksContext";
-import { AudioProvider } from "@/components/AudioPlayer";
+import { SettingsProvider } from "../components/context/SettingsContext";
+import {BookmarksProvider } from "../components/context/BookmarksContext.js";
+import { AudioProvider } from "../components/AudioPlayer.js";
 import Navbar from "../components/Navbar.js"
 import Footer from "../components/Footer.js" ;
 import SettingsSidebar from '../components/SettingsSidebar'
@@ -20,7 +21,7 @@ const AUDIO_CDN = "https://cdn.islamic.network/quran/audio";
 const AUDIO_BITRATE = 128;
 
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
