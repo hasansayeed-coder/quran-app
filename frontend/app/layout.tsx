@@ -1,4 +1,4 @@
-import "./globals.css";
+import React from "react";
 import { SettingsProvider } from "@/components/context/SettingsContext";
 import {BookmarksProvider } from "@/components/context/BookmarksContext";
 import { AudioProvider } from "@/components/AudioPlayer";
