@@ -1,4 +1,4 @@
-import { getSurahs } from "@/lib/api";
+import { getSurahs } from "../lib/api";
 import AyahOfTheDay from "@/components/AyahOfTheDay";
 import JuzNavigator from "@/components/JuzNavigator";
 import MoodAyah from "@/components/MoodAyah";

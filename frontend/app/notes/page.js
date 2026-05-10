@@ -3,7 +3,7 @@ export const metadata = {
   description: "Your personal reflections on Quran ayahs",
 };
 
-import NotesClient from "@/components/NotesClient";
+import NotesClient from "../../components/NotesClient";
 
 export default function NotesPage() {
   return (

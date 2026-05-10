@@ -3,7 +3,7 @@ export const metadata = {
   description: "Your saved ayahs from the Holy Quran",
 };
 
-import BookmarksClient from "@/components/BookmarksClient";
+import BookmarksClient from "../../components/BookmarksClient";
 
 export default function BookmarksPage() {
   return (
