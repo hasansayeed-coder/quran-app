@@ -37,7 +37,7 @@
     "**/*.mts",
     "app/page.js",
     "app/stats/page.js"
-  ],
+, "next.config.js"  ],
   "exclude": [
     "node_modules"
   ]
